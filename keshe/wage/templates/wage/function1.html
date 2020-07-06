@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'css/function1.css'%}" rel="stylesheet">
+    <script src="{% static 'js/jquery-3.5.1.js'%}"></script>
+    <script>
+        $(function () {
+            //TODO: 页面加载
+            $('#RenYuan0').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: './main.html'
+                    })
+                });
+            $('#RenYuan1').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: './AddStaff.html'
+                    })
+                });
+            $('#RenYuan2').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./StaffShow.html'
+                    })
+                });
+            $('#RenYuan3').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./StaffStats.html'
+                    })
+                });
+
+            $('#GongZi1').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./SalaryChange.html'
+                    })
+                });
+            $('#GongZi2').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./SalaryCheck.html'
+                    })
+                });
+            $('#GongZi3').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./SalaryStats.html'
+                    })
+                });
+
+            $('#KaoQin1').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./AddCheck.html'
+                    })
+                });
+            $('#KaoQin2').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./CheckStats.html'
+                    })
+                });
+
+            $('#ZhangHao1').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./IDAdmin.html'
+                    })
+                });
+            $('#ZhangHao2').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./PasswordChange.html'
+                    })
+                });
+            $('#Apart1').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./ApartmentList.html'
+                    })
+                });
+            $('#Post1').click(
+                function () {
+                    $("#MainContent").attr({
+                        src: ' ./PostList.html'
+                    })
+                });
+            //             $('#RenYuan1').click(function(){
+            //     $("#MainContent").load("./main.html",function(){
+            //     });
+            // });
+
+            //TODO:页面效果
+            $(".nav-menu").each(function () {
+                $(this).children(".nav-content").hide();
+            });
+
+            $(".nav-title").each(function () {
+                $(this).click(function () {
+                    var navEle = $(this).parent(".nav-menu").children(".nav-content");
+                    if (navEle.css("display") != "none") {
+                        navEle.slideUp();
+                    } else {
+                        var navMenu = navEle.parent(".nav-menu");
+                        var otherNav = navMenu.siblings();
+                        otherNav.each(function () {
+                            $(this).children(".nav-content").slideUp(1000);
+                        });
+                        navEle.slideDown();
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        function FrameLoad() {
+            $("#MainContent").css({
+                width: $(".content-right").css("width"),
+                height: $(".content-right").css("height")
+            });
+        };
+        setInterval("FrameLoad()", 1);
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="content-left">
+            <div class="left-title">
+                <a href="#" id="RenYuan0">工资管理系统后台</a>
+            </div>
+            <div class="seg"></div>
+            <div class="nav">
+                <div class="nav-menu">
+                    <div class="nav-title">员工管理</div>
+                    <div class="nav-content">
+                        <a href="#" id="RenYuan1">新建职员</a>
+                        <a href="#" id="RenYuan2">员工一览</a>
+                        <a href="#" id="RenYuan3">信息统计</a>
+                    </div>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-title">部门管理</div>
+                    <div class="nav-content">
+                        <a href="#" id="Apart1">部门列表</a>
+                        <a href="#" id="Apart2">岗位管理</a>
+                        
+                    </div>
+                </div>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-title">工资管理</div>
+                    <div class="nav-content">
+                        <a href="#" id="GongZi1">工资更改</a>
+                        <a href="#" id="GongZi2">工资核算</a>
+                        <a href="#" id="GongZi3">工资统计</a>
+                    </div>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-title">考勤管理</div>
+                    <div class="nav-content">
+                        <a href="#" id="KaoQin1">考勤统计</a>
+                    </div>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-title">账号管理</div>
+                    <div class="nav-content">
+                        <a href="#" id="ZhangHao1">员工账号</a>
+                        <a href="#" id="ZhangHao2">密码管理</a>
+                    </div>
+                </div>
+            </div>
+            <div class="seg1"></div>
+        </div>
+        <div class="content-top">
+            <div class="time">
+                <script>
+                    function time() {
+                        var myDate = new Date;
+                        var year = myDate.getFullYear(); //获取当前年
+                        var mon = myDate.getMonth() + 1; //获取当前月
+                        var date = myDate.getDate(); //获取当前日
+                        var hour = "00" + myDate.getHours();
+                        hour = hour.substr(hour.length - 2);
+                        var minute = "00" + myDate.getMinutes();
+                        minute = minute.substr(minute.length - 2);
+                        var second = "00" + myDate.getSeconds();
+                        second = second.substr(second.length - 2);
+                        var week = myDate.getDay();
+                        var weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+                        console.log(year, mon, date, weeks[week])
+                        $(".time").html(year + "年" + mon + "月" + date + "日 " + weeks[week]  +"<span>" + hour + " : " +
+                            minute + " : " + second + "</span>");
+                    };
+                    setInterval("time()", 100);
+                </script>
+            </div>
+        </div>
+        <div class="content-right">
+            <iframe src="" frameborder="0" id="MainContent"></iframe>
+            <script>
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

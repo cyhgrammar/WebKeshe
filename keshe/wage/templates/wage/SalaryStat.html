@@ -1,0 +1,542 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Simplify Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Bootstrap core CSS -->
+<link href="{% static 'bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+		
+		<!-- Font Awesome -->
+<link href="{% static 'css/font-awesome.min.css'%}" rel="stylesheet">
+
+		<!-- ionicons -->
+<link href="{% static 'css/ionicons.min.css'%}" rel="stylesheet">
+		
+		<!-- Simplify -->
+<link href="{% static 'css/simplify.min.css'%}" rel="stylesheet">
+</head>
+
+<body class="overflow-hidden">
+<div class="wrapper preload">
+  <div class="sidebar-right">
+    <div class="sidebar-inner scrollable-sidebar">
+      <div class="sidebar-header clearfix">
+        <input class="form-control dark-input" placeholder="Search" type="text">
+        <div class="btn-group pull-right"> <a href="#" class="sidebar-setting" data-toggle="dropdown"><i class="fa fa-cog fa-lg"></i></a>
+          <ul class="dropdown-menu pull-right flipInV">
+            <li><a href="#"><i class="fa fa-circle text-danger"></i><span class="m-left-xs">Busy</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i><span class="m-left-xs">Turn Off Chat</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="title-block"> Group Chat </div>
+      <div class="content-block">
+        <ul class="sidebar-list">
+          <li> <a href="#"> <i class="fa fa-circle-o text-success"></i><span class="m-left-xs">Close Friends</span> </a> </li>
+          <li> <a href="#"> <i class="fa fa-circle-o text-success"></i><span class="m-left-xs">Business</span> </a> </li>
+        </ul>
+      </div>
+      <div class="title-block"> Favorites </div>
+      <div class="content-block">
+        <ul class="sidebar-list">
+          <li> <a href="#" class="clearfix"> <img src="images/profile/profile2.jpg" class="img-circle" alt="user avatar">
+            <div class="chat-detail m-left-sm">
+              <div class="chat-name"> John Doe </div>
+              <div class="chat-message"> Where are you? </div>
+            </div>
+            <div class="chat-status"> <i class="fa fa-circle-o text-success"></i> </div>
+            <div class="chat-alert"> <span class="badge badge-purple bounceIn animation-delay2">2</span> </div>
+            </a> </li>
+          <li> <a href="#" class="clearfix"> <img src="images/profile/profile3.jpg" class="img-circle" alt="user avatar">
+            <div class="chat-detail m-left-sm">
+              <div class="chat-name"> Jane Doe </div>
+              <div class="chat-message"> Hello </div>
+            </div>
+            <div class="chat-status"> <i class="fa fa-circle-o text-success"></i> </div>
+            <div class="chat-alert"> <span class="badge badge-info bounceIn animation-delay2">1</span> </div>
+            </a> </li>
+          <li> <a href="#" class="clearfix"> <img src="images/profile/profile4.jpg" class="img-circle" alt="user avatar">
+            <div class="chat-detail m-left-sm">
+              <div class="chat-name"> John Doe </div>
+              <div class="chat-message"> See you again next week. </div>
+            </div>
+            <div class="chat-status"> <i class="fa fa-circle-o text-danger"></i> </div>
+            <div class="chat-alert"> <i class="fa fa-check text-success"></i> </div>
+            </a> </li>
+          <li> <a href="#" class="clearfix"> <img src="images/profile/profile5.jpg" class="img-circle" alt="user avatar">
+            <div class="chat-detail m-left-sm">
+              <div class="chat-name"> John Doe </div>
+              <div class="chat-message"> Hello, Are you there? </div>
+            </div>
+            <div class="chat-status"> <i class="fa fa-circle-o text-danger"></i> </div>
+            <div class="chat-alert"> <i class="fa fa-reply"></i> </div>
+            </a> </li>
+        </ul>
+      </div>
+      <div class="title-block"> More friends </div>
+      <div class="content-block">
+        <ul class="sidebar-list">
+          <li> <a href="#" class="clearfix"> <img src="images/profile/profile6.jpg" class="img-circle" alt="user avatar">
+            <div class="chat-detail m-left-sm">
+              <div class="chat-name"> John Doe </div>
+              <div class="chat-message"> Where are you? </div>
+            </div>
+            <div class="chat-status"> <i class="fa fa-circle-o text-success"></i> </div>
+            <div class="chat-alert"> <span class="badge badge-success bounceIn animation-delay2">2</span> </div>
+            </a> </li>
+          <li> <a href="#" class="clearfix"> <img src="images/profile/profile7.jpg" class="img-circle" alt="user avatar">
+            <div class="chat-detail m-left-sm">
+              <div class="chat-name"> Jane Doe </div>
+              <div class="chat-message"> Hello </div>
+            </div>
+            <div class="chat-status"> <i class="fa fa-circle-o text-success"></i> </div>
+            <div class="chat-alert"> <span class="badge badge-danger bounceIn animation-delay2">1</span> </div>
+            </a> </li>
+          <li> <a href="#" class="clearfix"> <img src="images/profile/profile8.jpg" class="img-circle" alt="user avatar">
+            <div class="chat-detail m-left-sm">
+              <div class="chat-name"> John Doe </div>
+              <div class="chat-message"> See you again next week. </div>
+            </div>
+            <div class="chat-status"> <i class="fa fa-circle-o text-danger"></i> </div>
+            <div class="chat-alert"> <i class="fa fa-check text-success"></i> </div>
+            </a> </li>
+          <li> <a href="#" class="clearfix"> <img src="images/profile/profile9.jpg" class="img-circle" alt="user avatar">
+            <div class="chat-detail m-left-sm">
+              <div class="chat-name"> John Doe </div>
+              <div class="chat-message"> Hello, Are you there? </div>
+            </div>
+            <div class="chat-status"> <i class="fa fa-circle-o text-danger"></i> </div>
+            <div class="chat-alert"> <i class="fa fa-reply"></i> </div>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+    <!-- sidebar-inner --> 
+  </div>
+  <!-- sidebar-right -->
+  <header class="top-nav">
+    <div class="top-nav-inner">
+      <div class="nav-header">
+        <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleSM"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a href="#" class="brand"><span class="brand-name">工资管理系统</span> </a></div>
+      <div class="nav-container">
+        <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleLG"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <div class="pull-right m-right-sm">
+          <div class="user-block hidden-xs"> <a href="#" id="userToggle" data-toggle="dropdown"> <img src="images/profile/profile1.jpg" alt="" class="img-circle inline-block user-profile-pic">
+            <div class="user-detail inline-block"> CYH <i class="fa fa-angle-down"></i> </div>
+            </a>
+            <div class="panel border dropdown-menu user-panel">
+              <div class="panel-body paddingTB-sm">
+                <ul>
+                  <li> <a href="/wage/"> <i class="fa fa-power-off fa-lg"></i><span class="m-left-xs">Sign out</span> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./top-nav-inner --> 
+  </header>
+  <aside class="sidebar-menu fixed">
+    <div class="sidebar-inner scrollable-sidebar">
+    <div class="main-menu">
+        <ul class="accordion">
+          <li class="menu-header"> Main Menu </li>
+          <li class="bg-palette1"> <a href="/wage/index"> <span class="menu-content block"> <span class="menu-icon"><em class="block fa fa-home fa-lg"></em></span> <span class="text m-left-sm">主页</span></span> <span class="menu-content-hover block"> 主页 </span></a></li>
+          <li class="openable bg-palette3"><a href="#"> <span class="menu-content block"> <span class="menu-icon"><em class="block fa fa-list fa-lg"></em></span> <span class="text m-left-sm">人事管理</span><span class="submenu-icon"></span></span> <span class="menu-content-hover block"> 员工 </span></a>
+            <ul class="submenu bg-palette4">
+              <li><a href="/wage/AddStaff"><span class="submenu-label">添加职员</span></a></li>
+              <li><a href="/wage/StaffShow"><span class="submenu-label">职员一览</span></a></li>
+              <li><a href="/wage/Department"><span class="submenu-label">部门管理</span></a></li>
+              <li><a href="/wage/Position"><span class="submenu-label">职位管理</span></a></li>
+              <li><a href="/wage/StaffStat"><span class="submenu-label">职员统计</span></a></li>
+            </ul>
+          </li>
+			<li class="openable bg-palette4 open"><a href="#"> <span class="menu-content block"> <span class="menu-icon"><em class="block fa fa-list fa-lg"></em></span> <span class="text m-left-sm">工资管理</span><span class="submenu-icon"></span></span> <span class="menu-content-hover block"> 工资 </span></a>
+			  <ul class="submenu bg-palette4">
+          <li><a href="/wage/SalaryFactor"><span class="submenu-label">薪资详细</span></a></li>
+			    <li><a href="/wage/SalaryPut"><span class="submenu-label">工资详单</span></a></li>
+			    <li class="active"><a href="/wage/SalaryStat"><span class="submenu-label">工资统计</span></a></li>
+			    <li></li>
+            </ul>
+          </li>
+          <li class="openable bg-palette5"><a href="#"> <span class="menu-content block"> <span class="menu-icon"><em class="block fa fa-tags fa-lg"></em></span> <span class="text m-left-sm">考勤管理</span><span class="submenu-icon"></span></span> <span class="menu-content-hover block"> 考勤 </span></a>
+            <ul class="submenu">
+              <li><a href="/wage/CheckList"><span class="submenu-label">考勤统计</span></a></li>
+            </ul>
+          </li>
+          <li class="openable bg-palette6"><a href="#"> <span class="menu-content block"> <span class="menu-icon"><em class="block fa fa-gift fa-lg"></em></span> <span class="text m-left-sm">账号管理</span><span class="submenu-icon"></span></span> <span class="menu-content-hover block"> 账号 </span></a>
+            <ul class="submenu">
+              <li><a href="/wage/StaffAccounts"><span class="submenu-label">员工账号</span></a></li>
+              <li><a href="/wage/AlterPassword"><span class="submenu-label">密码修改</span></a></li>
+            </ul>
+          </li>
+          <li class="openable bg-palette7">
+<ul class="submenu">
+              <li class="openable"> <a href="signin.html"> <span class="submenu-label">menu 2.1</span> <small class="badge badge-success badge-square bounceIn animation-delay2 m-left-xs pull-right">3</small> </a>
+                <ul class="submenu third-level">
+                  <li><a href="#"><span class="submenu-label">menu 3.1</span></a></li>
+                  <li><a href="#"><span class="submenu-label">menu 3.2</span></a></li>
+                  <li class="openable"> <a href="#"> <span class="submenu-label">menu 3.3</span> <small class="badge badge-danger badge-square bounceIn animation-delay2 m-left-xs pull-right">2</small> </a>
+                    <ul class="submenu fourth-level">
+                      <li><a href="/wage/#"><span class="submenu-label">menu 4.1</span></a></li>
+                      <li><a href="/wage/#"><span class="submenu-label">menu 4.2</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#"><span class="submenu-label">menu 2.2</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    <!-- sidebar-inner --> 
+  </aside>
+  <div class="main-container">
+    <div class="col-md-6">
+      <div class="smart-widget">
+        <div class="smart-widget-header">
+          统计
+          <span class="smart-widget-option">
+            <span class="refresh-icon-animated">
+              <i class="fa fa-circle-o-notch fa-spin"></i>
+            </span>
+                          <a href="#" class="widget-toggle-hidden-option">
+                              <i class="fa fa-cog"></i>
+                          </a>
+                          <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                              <i class="fa fa-chevron-up"></i>
+                          </a>
+                          <a href="#" class="widget-refresh-option">
+                              <i class="fa fa-refresh"></i>
+                          </a>
+                          <a href="#" class="widget-remove-option">
+                              <i class="fa fa-times"></i>
+                          </a>
+                      </span>
+        </div>
+        <div class="smart-widget-inner">
+          <div class="smart-widget-hidden-section">
+            <ul class="widget-color-list clearfix">
+              <li style="background-color:#20232b;" data-color="widget-dark"></li>
+              <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+              <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+              <li style="background-color:#2baab1;" data-color="widget-green"></li>
+              <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+              <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+              <li style="background-color:#e36159;" data-color="widget-red"></li>
+              <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+              <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+              <li style="background-color:#fff;" data-color="reset"></li>
+            </ul>
+          </div>
+          <div class="smart-widget-body">
+            <div id="content1" style="width:400px;height:400px"></div>
+          </div>
+        </div><!-- ./smart-widget-inner -->
+      </div><!-- ./smart-widget -->
+    </div>
+
+     <div class="col-md-6">
+      <div class="smart-widget">
+        <div class="smart-widget-header">
+          统计
+          <span class="smart-widget-option">
+            <span class="refresh-icon-animated">
+              <i class="fa fa-circle-o-notch fa-spin"></i>
+            </span>
+                          <a href="#" class="widget-toggle-hidden-option">
+                              <i class="fa fa-cog"></i>
+                          </a>
+                          <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                              <i class="fa fa-chevron-up"></i>
+                          </a>
+                          <a href="#" class="widget-refresh-option">
+                              <i class="fa fa-refresh"></i>
+                          </a>
+                          <a href="#" class="widget-remove-option">
+                              <i class="fa fa-times"></i>
+                          </a>
+                      </span>
+        </div>
+        <div class="smart-widget-inner">
+          <div class="smart-widget-hidden-section">
+            <ul class="widget-color-list clearfix">
+              <li style="background-color:#20232b;" data-color="widget-dark"></li>
+              <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+              <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+              <li style="background-color:#2baab1;" data-color="widget-green"></li>
+              <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+              <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+              <li style="background-color:#e36159;" data-color="widget-red"></li>
+              <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+              <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+              <li style="background-color:#fff;" data-color="reset"></li>
+            </ul>
+          </div>
+          <div class="smart-widget-body">
+            <div id="content3" style="width:400px;height:400px"></div>
+          </div>
+        </div><!-- ./smart-widget-inner -->
+      </div><!-- ./smart-widget -->
+    </div>
+  </div>
+  <!-- /main-container -->
+  
+  <footer class="footer"><span class="footer-brand"> <strong class="text-danger">CYH</strong> Admin </span>
+    <p class="no-margin"> &copy; 2020 <strong>CYH Admin</strong>. ALL Rights Reserved. </p>
+  </footer>
+</div>
+<!-- /wrapper --> 
+
+<a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a> 
+
+<!-- Delete Widget Confirmation -->
+<div class="custom-popup delete-widget-popup delete-confirmation-popup" id="deleteWidgetConfirm">
+  <div class="popup-header text-center"> <span class="fa-stack fa-4x"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-lock fa-stack-1x fa-inverse"></i> </span> </div>
+  <div class="popup-body text-center">
+    <h5>Are you sure to delete this widget?</h5>
+    <strong class="block m-top-xs"><i class="fa fa-exclamation-circle m-right-xs text-danger"></i>This action cannot be undone</strong>
+    <div class="text-center m-top-lg"> <a class="btn btn-success m-right-sm remove-widget-btn">Delete</a> <a class="btn btn-default deleteWidgetConfirm_close">Cancel</a> </div>
+  </div>
+</div>
+
+<!-- Le javascript
+	    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+
+<!-- Jquery --> 
+<script src="{% static 'js/jquery-1.11.1.min.js'%}"></script>
+		
+<!-- Bootstrap -->
+ <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+		
+		<!-- Slimscroll -->
+		<script src="{% static 'js/jquery.slimscroll.min.js'%}"></script>
+		
+		<!-- Popup Overlay -->
+		<script src="{% static 'js/jquery.popupoverlay.min.js'%}"></script>
+
+		<!-- Modernizr -->
+		<script src="{% static 'js/modernizr.min.js'%}"></script>
+		
+		<!-- Simplify -->
+    <script src="{% static 'js/simplify/simplify.js'%}"></script>
+    
+    	<!-- Echarts -->
+      <script src="{% static 'js/echarts.js'%}"></script>
+
+      <script>
+    
+        var myChart = echarts.init(document.getElementById('content1'));
+        var dataAxis = {{mes1|safe}}
+var data = {{mes2|safe}}
+var yMax = 12000;
+var dataShadow = [];
+
+for (var i = 0; i < data.length; i++) {
+    dataShadow.push(yMax);
+}
+
+option = {
+    title: {
+        text: '员工获得工资',
+        subtext: ''
+    },
+    xAxis: {
+        data: dataAxis,
+        axisLabel: {
+            inside: true,
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        axisTick: {
+            show: false
+        },
+        axisLine: {
+            show: false
+        },
+        z: 10
+    },
+    yAxis: {
+        axisLine: {
+            show: false
+        },
+        axisTick: {
+            show: false
+        },
+        axisLabel: {
+            textStyle: {
+                color: '#999'
+            }
+        }
+    },
+    dataZoom: [
+        {
+            type: 'inside'
+        }
+    ],
+    series: [
+        { // For shadow
+            type: 'bar',
+            itemStyle: {
+                color: 'rgba(0,0,0,0.05)'
+            },
+            barGap: '-100%',
+            barCategoryGap: '40%',
+            data: dataShadow,
+            animation: false
+        },
+        {
+            type: 'bar',
+            itemStyle: {
+                color: new echarts.graphic.LinearGradient(
+                    0, 0, 0, 1,
+                    [
+                        {offset: 0, color: '#83bff6'},
+                        {offset: 0.5, color: '#188df0'},
+                        {offset: 1, color: '#188df0'}
+                    ]
+                )
+            },
+            emphasis: {
+                itemStyle: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]
+                    )
+                }
+            },
+            data: data
+        }
+    ]
+};
+
+// Enable data zoom when user click bar.
+var zoomSize = 6;
+myChart.on('click', function (params) {
+    console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+    myChart.dispatchAction({
+        type: 'dataZoom',
+        startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+        endValue: dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+    });
+});
+        myChart.setOption(option);
+    </script>
+
+<script>
+        var x = {{mes3|safe}}
+        var y = {{mes4|safe}}
+        var myChart = echarts.init(document.getElementById('content3'));
+        option = {
+            title: {
+                text: '各部门工资开支',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: y,
+            },
+            series: [{
+                name: '部门',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '60%'],
+                data: x,
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };
+
+        myChart.setOption(option);
+    </script>
+
+<script>
+			$(function()	{
+				//Delete Widget Confirmation
+				$('#deleteWidgetConfirm').popup({
+					vertical: 'top',
+					pagecontainer: '.container',
+					transition: 'all 0.3s'
+				});
+
+				//Form Validation
+				$('#basic-constraint').parsley( { listeners: {
+			        onFormSubmit: function ( isFormValid, event ) {
+			            if(isFormValid)	{
+							return false;
+						}
+			        }
+			    }}); 
+				
+				$('#type-constraint').parsley( { listeners: {
+			        onFormSubmit: function ( isFormValid, event ) {
+			            if(isFormValid)	{
+							return false;
+						}
+			        }
+			    }}); 
+				 
+				$('#formValidate1').parsley( { listeners: {
+			        onFormSubmit: function ( isFormValid, event ) {
+			            if(isFormValid)	{
+							alert('Registration Complete');
+							return false;
+						}
+			        }
+			    }}); 
+				
+				$('#formValidate2').parsley( { listeners: {
+					onFieldValidate: function ( elem ) {
+						// if field is not visible, do not apply Parsley validation!
+						if ( !$( elem ).is( ':visible' ) ) {
+							return true;
+						}
+
+						return false;
+					},
+			        onFormSubmit: function ( isFormValid, event ) {
+			            if(isFormValid)	{
+							alert('Your message has been sent');
+							return false;
+						}
+			        }
+			    }}); 
+			});
+			
+			$("#submit").click(function(){
+    $.ajax({
+        url:'demo.php',
+        type:"get",
+        data:$('#basic-constraint').serialize(),
+        success: function(data) {
+            $("#result").text(data);
+			
+        }
+    });
+});
+		</script>
+</body>
+</html>

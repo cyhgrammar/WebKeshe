@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>部门列表</title>
+{#    <link rel="stylesheet" href="../static/css/SalaryChange.css">#}
+{#    <script src="../static/js/CheckAll.js"></script>#}
+{#    <script src="../static/js/jquery-3.5.1.js"></script>#}
+    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'js/echarts.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/SalaryChange.css' %}">
+</head>
+
+<body>
+    <h1>部门列表</h1>
+    <table class="tablelist" id="table1">
+        <thead>
+            <th>序号</th>
+            <th>部门名称</th>
+            <th style="width: 1000px;">部门描述</th>
+            <th><input name="checkAll" type="checkbox" id="checkAll" onchange="selectAll()">全选/
+                <input name="checkOther" type="checkbox" id="checkOther" onchange="selectOther()">反选</th>
+        </thead>
+        <tbody>
+            <tr id="clo">
+                <td class="td">10</td>
+                <td>人事部</td>
+                <td>人员的管理，调动</td>
+                <td><a class="modify"> 修改 </a><a class="remove"> 删除 </a><input name="checkItem" type="checkbox"
+                        value=""></td>
+            </tr>
+{#            <tr>#}
+{#                <td class="td">10</td>#}
+{#                <td>业务部</td>#}
+{#                <td>唱片销售，业务洽谈</td>#}
+{#                <td><a class="modify"> 修改 </a><a class="remove"> 删除 </a><input name="checkItem" type="checkbox"#}
+{#                        value=""></td>#}
+{#            </tr>#}
+{#            <tr>#}
+{#                <td class="td">10</td>#}
+{#                <td>开发部</td>#}
+{#                <td>产品研发，技术开发</td>#}
+{#                <td><a class="modify"> 修改 </a><a class="remove"> 删除 </a><input name="checkItem" type="checkbox"#}
+{#                        value=""></td>#}
+{#            </tr>#}
+{#            <tr>#}
+{#                <td class="td">10</td>#}
+{#                <td>设计部</td>#}
+{#                <td>UI设计，图形设计</td>#}
+{#                <td><a class="modify"> 修改 </a><a class="remove"> 删除 </a><input name="checkItem" type="checkbox"#}
+{#                        value=""></td>#}
+{#            </tr>#}
+        {% for data in data %}
+             <tr id="clo">
+                <td class="td">{{data.a_id}}</td>
+                <td>{{ data.a_name }}</td>
+                <td>{{ data.a_describe }}</td>
+                <td><a class="modify"> 修改 </a><a class="remove"> 删除 </a><input name="checkItem" type="checkbox"
+                        value=""></td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    <img src="../static/images/添加.png" id="Add1" onclick="fun()" style="float: left;">
+    <script>
+        $("th").css({
+            "background-color": "dimgray",
+            "color": "white"
+        });
+        $("tr:odd").css("background-color", "#DCDCDC");
+        $("tr:even").css("background-color", "whitesmoke");
+
+
+        $(".modify").click(function () {
+            $(this).parent().siblings("td").each(function () //找同类元素td
+                {
+                    var is_text = $(this).find("input:text"); //判断单元格下是否含有文本框
+                    if (!is_text.length) {
+                        $(this).html("<input size='13' type='text' value=' " + $(this).text() + " ' />");
+                    } else
+                        $(this).html(is_text.val());
+                })
+        });
+
+        $(".remove").click(function () {
+            if (window.confirm("您确定要删除数据吗?")) {
+                $(this).parent().parent().remove();
+            }
+        });
+    </script>
+    <script>
+        var i = 1;
+        $(".td").each(function () {
+            $(this).html(i++);
+        })
+        //添加一行
+        function fun() {
+            var $td = $("#clo").clone(); //增加一行,克隆第一个对象
+            $(".tablelist").append($td);
+            var i = 1;
+            $(".td").each(function () { //增加一行后重新更新序号1,2,3......
+                $(this).html(i++);
+            })
+            $(".tablelist tr:last").html("<td class='td'>" + (i - 1) +
+                "<td></td><td></td><td><a class='modify'> 修改 </a><a class='remove'> 删除 </a><input name='checkItem' type='checkbox'value=''></td>"
+                );
+
+        }
+        $("#table1").delegate(".modify", "click", function () {
+            $(this).parent().siblings("td").each(function () //找同类元素td
+                {
+                    var is_text = $(this).find("input:text"); //判断单元格下是否含有文本框
+                    if (!is_text.length) {
+                        $(this).html("<input size='13' type='text' value=' " + $(this).text() + " ' />");
+                    } else
+                        $(this).html(is_text.val());
+                })
+        });
+        $("#table1").delegate(".remove", "click", function () {
+            if (window.confirm("您确定要删除数据吗?")) {
+                $(this).parent().parent().remove();
+            }
+        });
+    </script>
+</body>
+
+</html>

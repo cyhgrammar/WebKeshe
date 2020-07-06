@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'css/login.css'%}" rel="stylesheet">
+    <script src="{% static 'js/jquery-3.5.1.js'%}"></script>
+</head>
+<body>
+    <div class="center">
+        <h1>员工签到</h1>
+        <form method="post" action='Deal/'>
+        {% csrf_token %}
+            <div class="txt_field">
+                <input type="text" required id="usr" name="usr">
+                <span></span>
+                <label>用户名</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" required id="psd" name="psd">
+                <span></span>
+                <label>密码</label>
+            </div>  
+            <div class="pass"></div>
+            <input type="submit" value="签到" id="ChuFa">
+        </form>  
+    </div>
+</body>
+</html>
